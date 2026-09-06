@@ -62,33 +62,9 @@ enterBtn.addEventListener("click", function(){
 
     popup.style.display = "none";
 
-    if(currentLevel === 1){
-        window.location.href = "ch1le1.html";
-    }
-    else if(currentLevel === 2){
-        window.location.href = "ch1le2.html";
-    }
-    else if(currentLevel === 3){
-        window.location.href = "ch1le3.html";
-    }
-    else if(currentLevel === 4){
-        window.location.href = "ch1le4.html";
-    }
-    else if(currentLevel === 5){
-        window.location.href = "ch1le5.html";
-    }
-    else if(currentLevel === 6){
-        window.location.href = "ch1le6.html";
-    }
-    else if(currentLevel === 7){
-        window.location.href = "ch1le7.html";
-    }
-    else if(currentLevel === 8){
-        window.location.href = "ch1le8.html";
-    }
-    else if(currentLevel === 9){
-        window.location.href = "ch1le9.html";
-    }
+    // All 9 levels run the same 3D battle scene; the level number is passed
+    // along so the battle can pick the right enemy and difficulty.
+    window.location.href = "battle.html?level=" + currentLevel;
 
 });
 
@@ -151,6 +127,17 @@ function openTask(){
 
     // Go to Loading Page
     window.location.href = "loading2.html";
+
+}
+
+// Closes the task popup box on this page.
+function closeTask(){
+
+    const taskPopup = document.getElementById("taskPopup");
+
+    if(taskPopup){
+        taskPopup.style.display = "none";
+    }
 
 }
 
